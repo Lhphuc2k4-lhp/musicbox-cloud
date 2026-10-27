@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: musicbox-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health.php
+    envVars:
+      - key: MUSICBOX_DB_HOST
+        value: 758e17.h.filess.io
+      - key: MUSICBOX_DB_PORT
+        value: "3307"
+      - key: MUSICBOX_DB_NAME
+        value: musicbox_parklabel
+      - key: MUSICBOX_DB_USER
+        value: musicbox_parklabel
+      - key: MUSICBOX_DB_TLS_MODE
+        value: required
+      - key: MUSICBOX_DB_PASSWORD
+        sync: false
+      - key: MUSICBOX_LYRICS_SYNC_ENABLED
+        value: "0"
