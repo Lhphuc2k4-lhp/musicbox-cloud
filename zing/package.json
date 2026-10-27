@@ -1,0 +1,14 @@
+{
+  "name": "musicbox-zingmp3-probe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local compatibility check; does not alter the Android app or music database.",
+  "scripts": {
+    "probe": "node probe.cjs",
+    "start": "node server.cjs",
+    "test": "node --test bridge.test.cjs"
+  },
+  "dependencies": {
+    "zingmp3-api-full": "1.0.14"
+  }
+}
