@@ -1,4 +1,3 @@
-
 <?php
 
 function splitArtists(string $artistText): array
